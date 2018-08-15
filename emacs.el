@@ -63,7 +63,7 @@
 (defun my:c-cpp-init ()
   (c-set-style "linux")
   )
-(add-hook 'c++-mode-hook 'my:c-cpp-init)
+(add-hook 'c-mode-hook 'my:c-cpp-init)
 (add-hook 'c++-mode-hook 'my:c-cpp-init)
 
 ;; Enable moving with shift through buffers
