@@ -1,0 +1,39 @@
+# Bash configuration file
+#
+# @author	Mykola Odnosumov
+# @date		2018-08-15
+
+# Prompt related
+normal="\[\e[0m\]"
+red="\[\e[31m\]"
+green="\[\e[32m\]"
+blue="\[\e[34m\]"
+
+user_host_part="[$red\u$normal@$blue\h$normal]"
+path_part="$normal[$green\W$normal]"
+export PS1="$user_host_part $path_part \$ "
+
+# Custom variables
+MAIL="modnosum@gmail.com"
+EDITOR=emacs
+VISUAL=$EDITOR
+
+# Cleaning files
+CLEAN_DEPTH=4
+alias clean='find . -maxdepth $CLEAN_DEPTH -type f \( -name "*~" -o\
+      	     -name "#*#" \) -print -delete 2> /dev/null'
+
+# Listing files
+if ls --color &> /dev/null; then
+    alias ls='ls --color=auto'
+elif ls -G &> /dev/null; then
+    alias ls='ls -G'
+fi
+alias la='ls -al'
+alias l='la'
+alias ll='ls -l'
+alias lh='ls -al --ignore="[A-Za-z]*"'
+
+# Configuration related
+alias re_bash='. $HOME/.bashrc'
+alias ed_bash='$EDITOR $HOME/.bashrc'

@@ -1,0 +1,119 @@
+ls -al
+re_bash
+source ~/.bashrc
+clean
+find . -maxdepth 4
+re_bash
+clean
+ls- la
+ls -al
+re_bash
+env
+clean
+echo $CLEAN_DEPTH
+set CLEAN_DEPTH=5
+echo $CLEAN_DEPTH
+set
+export CLEAN_DEPTH=5
+echo $CLEAN_DEPTH
+clean
+ls -al
+re_bas
+bash: re_bas: command noht found
+[modnosum@maklai] [~] $ 
+bash: re_bas: command noht found
+[modnosum@maklai] [~] $ re_bash
+re_bash
+re_bash
+re_bash
+re_bash
+re_bash
+re_bash
+cd Development/work/
+./mount_work.sh 
+ls -al
+code booked/
+l
+ls -a
+cd
+ls -al
+emacs .bashrc
+ls -al
+re_bash
+source ~/.bashrc
+fg
+emacs .bashrc
+re_bash
+fg
+re_bash
+ls -al
+fg
+re_bahs
+re_bash
+ls- al
+fg
+re_bash
+ls -al
+fg
+fg
+re_bash
+ls- al
+ls -al
+clean
+ls -al
+fg
+re_bash
+ls -al
+fg
+re_bash
+fg
+re_bash
+ls -al
+cd Development/
+ls -al
+cd misc/
+ls -al
+cd
+ls -al
+fg
+re_bash
+ls- al
+ls -al
+fg
+re_bash
+ls -la
+exit
+ls -al
+cat .bashrc 
+export LS_COLORS
+ls -al
+emacs .bashrc
+re_bash
+ls -al
+source ~/.bashrc
+ls -al
+emacs /etc/profile
+ls -la
+emacs .bash_profile
+exit
+ls -al
+emacs .bash_profile 
+exit
+ls -al
+rm -fr .zshrc
+ls -al
+rm -fr .zsh*
+ls -al
+rm -fr .zcomp*
+ls- al
+rm -fr .zdirs 
+ls -al
+rm -fr .xmonad/
+ls -al
+rm -fr .vim
+ls -al
+ssh odnosumov@jail.odnosumov
+ssh odnosumov@jail.odnosumov
+ssh odnosumov@jail.odnosumov
+ssh odnosumov@jail.odnosumov
+exit
