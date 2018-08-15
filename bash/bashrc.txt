@@ -49,6 +49,9 @@ alias glg='git log'
 alias gl='git pull'
 alias gst='git status'
 
+# Emacs related
+alias em='emacs'
+
 # Configuration related
 alias re_bash='. $HOME/.bashrc'
 alias ed_bash='$EDITOR $HOME/.bashrc'
