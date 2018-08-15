@@ -79,3 +79,7 @@
 (substitute-key-definition 'eval-expression
                            'eval-region
                            (current-global-map))
+
+;; Set Theme
+(require 'zenburn-theme)
+(load-theme 'zenburn t nil)
