@@ -1,5 +1,5 @@
 
-;; FUNCTIONS
+;;; FUNCTIONS
 
 ;; Add MELPA to package source list
 (defun add-melpa-to-package-list ()
@@ -25,7 +25,7 @@
   (require 'erlang-start)
   )
 
-;; CONFIGURATION
+;;; CONFIGURATION
 
 ;; Enable package support
 (add-melpa-to-package-list)
@@ -39,8 +39,32 @@
   )
 
 ;; Enable auto completion
+;;; Auto complete
 (require 'auto-complete)
+(require 'auto-complete-config)
 (ac-config-default)
+
+(defun my:ac-c-header-init ()
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers))
+(add-hook 'c++-mode-hook 'my:ac-c-header-init)
+(add-hook 'c-mode-hook 'my:ac-c-header-init)
+
+;;; Snippets
+(require 'yasnippet)
+(yas-global-mode 1)
+
+;;; Clang format
+(require 'clang-format)
+(define-key global-map (kbd "C-c i") 'clang-format-region)
+(define-key global-map (kbd "C-c u") 'clang-format-buffer)
+
+;;; C/C++ config
+(defun my:c-cpp-init ()
+  (c-set-style "linux")
+  )
+(add-hook 'c++-mode-hook 'my:c-cpp-init)
+(add-hook 'c++-mode-hook 'my:c-cpp-init)
 
 ;; Enable moving with shift through buffers
 (require 'windmove)
