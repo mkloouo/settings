@@ -35,9 +35,9 @@ alias ll='ls -l'
 alias lh='ls -al --ignore="[A-Za-z]*"'
 
 # Opening Files
-if command -v xdg-open; then
+if command -v xdg-open &> /dev/null; then
     alias op='xdg-open'
-elif command -v open; then
+elif command -v open &> /dev/null; then
     alias op='open'
 fi
 
