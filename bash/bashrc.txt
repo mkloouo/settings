@@ -20,8 +20,7 @@ export VISUAL=$EDITOR
 
 # Cleaning Files
 CLEAN_DEPTH=4
-alias clean='find . -maxdepth $CLEAN_DEPTH -type f \( -name "*~" -o\
-      	     -name "#*#" \) -print -delete 2> /dev/null'
+alias clean='find . -maxdepth $CLEAN_DEPTH -type f \( -name "*~" -o -name "#*#" \) -print -delete 2> /dev/null'
 
 # Listing Files
 if ls --color &> /dev/null; then
@@ -60,7 +59,7 @@ alias gst='git status'
 alias em='emacs'
 
 # 42 Related
-alias 42='bash .42FileChecker/42FileChecker.sh'
+alias 42='bash $HOME/.42FileChecker/42FileChecker.sh'
 
 # Configuration related
 alias re_bash='. $HOME/.bashrc'
