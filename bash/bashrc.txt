@@ -17,6 +17,9 @@ export PS1="$user_host_part $path_part \$ "
 export MAIL="modnosum@gmail.com"
 export EDITOR=emacs
 export VISUAL=$EDITOR
+if [[ -d $HOME/.brew ]]; then
+	export PATH=$HOME/.brew/bin:$PATH
+fi
 
 # Cleaning Files
 CLEAN_DEPTH=4
@@ -36,8 +39,15 @@ alias lh='ls -al --ignore="[A-Za-z]*"'
 # Opening Files
 if command -v xdg-open &> /dev/null; then
     alias op='xdg-open'
+	XDG_OPEN_ENABLED=1
 elif command -v open &> /dev/null; then
     alias op='open'
+	OPEN_ENABLED=1
+fi
+
+# Vscode alias
+if [[ -n $OPEN_ENABLED ]]; then
+	alias code='open -a $HOME/Applications/Visual\ Studio\ Code.app'
 fi
 
 # Git Related
@@ -53,6 +63,8 @@ alias gd='git diff'
 alias gh='git push'
 alias glg='git log'
 alias gl='git pull'
+alias gr='git remote'
+alias grv='gr -v'
 alias gst='git status'
 
 # Emacs Related
