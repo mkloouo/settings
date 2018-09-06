@@ -51,20 +51,23 @@ if [[ -n $OPEN_ENABLED ]]; then
 fi
 
 # Git Related
-alias gaa='ga --all'
+alias gaa='git add --all'
 alias ga='git add'
-alias gba='gb --all'
+alias gba='git branch --all'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
 alias gb='git branch'
 alias gcm='git commit'
 alias gcmm='git commit --message'
 alias gcof='git checkout --'
+alias gcob='git checkout --track'
 alias gco='git checkout'
 alias gd='git diff'
 alias gh='git push'
 alias glg='git log'
 alias gl='git pull'
 alias gr='git remote'
-alias grv='gr -v'
+alias grv='git remote -v'
 alias gst='git status'
 
 # Emacs Related
