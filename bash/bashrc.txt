@@ -21,6 +21,9 @@ if [[ -d $HOME/.brew ]]; then
 	export PATH=$HOME/.brew/bin:$PATH
 fi
 
+# Viewing history
+alias h='history'
+
 # Cleaning Files
 CLEAN_DEPTH=4
 alias clean='find . -maxdepth $CLEAN_DEPTH -type f \( -name "*~" -o -name "#*#" \) -print -delete 2> /dev/null'
