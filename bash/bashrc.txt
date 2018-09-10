@@ -82,3 +82,8 @@ alias 42='bash $HOME/.42FileChecker/42FileChecker.sh'
 # Configuration related
 alias re_bash='. $HOME/.bashrc'
 alias ed_bash='$EDITOR $HOME/.bashrc'
+
+# If available - alias for prolog
+if command -v gprolog &> /dev/null; then
+    alias g=gprolog
+fi
