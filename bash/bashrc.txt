@@ -86,4 +86,5 @@ alias ed_bash='$EDITOR $HOME/.bashrc'
 # If available - alias for prolog
 if command -v gprolog &> /dev/null; then
     alias g=gprolog
+    alias gf='gprolog --consult-file'
 fi
