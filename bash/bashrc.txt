@@ -13,6 +13,10 @@ user_host_part="[$red\u$normal@$blue\h$normal]"
 path_part="$normal[$green\W$normal]"
 export PS1="$user_host_part $path_part \$ "
 
+# History
+export HISTFILESIZE=10000
+alias h='history'
+
 # Custom Variables
 export MAIL="modnosum@gmail.com"
 export EDITOR=emacs
@@ -20,9 +24,6 @@ export VISUAL=$EDITOR
 if [[ -d $HOME/.brew ]]; then
 	export PATH=$HOME/.brew/bin:$PATH
 fi
-
-# Viewing history
-alias h='history'
 
 # Cleaning Files
 CLEAN_DEPTH=4
