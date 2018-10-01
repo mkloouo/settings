@@ -99,3 +99,4 @@ fi
 
 # Work
 alias sshod='ssh odnosumov@jail.odnosumov'
+alias sftpod='sftp odnosumov@jail.odnosumov'
