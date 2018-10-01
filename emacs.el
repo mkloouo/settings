@@ -16,27 +16,11 @@
       (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
   )
 
-(defun add-erlang-support ()
-  "Enables erlang support by adding sources to load-path variable"
-  (setq load-path (cons "/usr/lib/erlang/lib/tools-3.0/emacs/" load-path))
-
-  (setq erlang-root-dir "/usr/lib/erlang")
-  (setq exec-path (cons "/usr/lib/erlang/bin" exec-path))
-  (require 'erlang-start)
-  )
-
 ;;; CONFIGURATION
 
 ;; Enable package support
 (add-melpa-to-package-list)
 (package-initialize)
-
-;; Enable erlang support
-(if
-    (eq 0 (length (shell-command-to-string "command -v erl")))
-    (warn "Enable erlang support: no erl found")
-  (add-erlang-support)  
-  )
 
 ;; Enable auto completion
 ;;; Auto complete
