@@ -3,6 +3,10 @@
 # @author	Mykola Odnosumov
 # @date		2018-08-15
 
+# Autocomplete (need bash-completion package)
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
+
 # Prompt Related
 normal="\[\e[0m\]"
 red="\[\e[31m\]"
@@ -65,7 +69,7 @@ alias gbd='git branch -d'
 alias gbD='git branch -D'
 alias gb='git branch'
 alias gcm='git commit'
-alias gcmm='git commit --message'
+alias gcmsg='git commit --message'
 alias gcof='git checkout --'
 alias gcob='git checkout --track'
 alias gco='git checkout'
@@ -92,3 +96,6 @@ if command -v gprolog &> /dev/null; then
     alias g=gprolog
     alias gf='gprolog --consult-file'
 fi
+
+# Work
+alias sshod='ssh odnosumov@jail.odnosumov'
