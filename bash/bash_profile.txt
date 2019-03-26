@@ -1,8 +1,0 @@
-# Bash profile
-#
-# @author	Mykola Odnosumov
-# @date		2018-08-15
-
-if [[ -e $HOME/.bashrc ]]; then
-    source $HOME/.bashrc
-fi
