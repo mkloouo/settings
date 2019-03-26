@@ -17,4 +17,6 @@ HIST_STAMPS="mm/dd/yyyy";
 plugins=(git);
 
 source $ZSH/oh-my-zsh.sh;
-source $HOME/.bashrc;
+
+export SHELL=zsh;
+source $HOME/settings/.commrc;
