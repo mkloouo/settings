@@ -51,3 +51,8 @@ alias ed_rc='$EDITOR $HOME/.${SHELL}rc';
 
 # CMake related
 alias ccmake='rm -fr CMakeFiles CMakeCache.txt cmake_install.txt Makefile';
+
+# Repo (source.android.com tool) related
+if [ -d "${HOME}/bin" ]; then
+	export PATH="${HOME}/bin:${PATH}";
+fi
