@@ -39,11 +39,14 @@ alias gcob='git checkout --track';
 alias gco='git checkout';
 alias gd='git diff';
 alias gdc='git diff --cached';
-alias gh='git push';
+alias gds='git diff --staged';
+alias gph='git push';
+alias gpsup='git push --set-upstream origin $(git branch --show-current)';
 alias glg='git log';
-alias gl='git pull';
+alias gpl='git pull';
 alias gr='git remote';
 alias grv='git remote -v';
+alias grh='git reset HEAD';
 alias gst='git status';
 
 export SHELL=bash;
