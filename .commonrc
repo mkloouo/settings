@@ -14,7 +14,7 @@ export HISTFILESIZE=10000;
 alias h='history';
 
 # Custom Variables
-export MAIL="modnosum@gmail.com";
+export MAIL="mkloouo@gmail.com";
 export EDITOR=vim;
 export VISUAL=$EDITOR;
 if [[ -d $HOME/.brew ]]; then
@@ -28,22 +28,20 @@ export PATH=$HOME/.local/bin:$PATH;
 export CLEAN_DEPTH=4;
 alias clean='find . -maxdepth $CLEAN_DEPTH -type f \( -name "*~" -o -name "#*#" \) -print -delete 2> /dev/null';
 
-alias la='ls -al';
-alias l='la';
-alias ll='ls -l';
-alias lh='ls -al --ignore="[A-Za-z]*"';
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+	alias la='ls -al';
+	alias l='la';
+	alias ll='ls -l';
+	alias lh='ls -al --ignore="[A-Za-z]*"';
+fi
 
 # Opening Files
 if command -v xdg-open &> /dev/null; then
-	alias op='xdg-open';
-	XDG_OPEN_ENABLED=1;
+	alias open='xdg-open';
+	OPEN_ENABLED=1;
 elif command -v open &> /dev/null; then
-	alias op='open';
 	OPEN_ENABLED=1;
 fi
-
-# 42 Related
-alias 42='bash $HOME/.42FileChecker/42FileChecker.sh';
 
 # Configuration related
 alias re_rc='source $HOME/.${SHELL}rc';
@@ -52,7 +50,3 @@ alias ed_rc='$EDITOR $HOME/.${SHELL}rc';
 # CMake related
 alias ccmake='rm -fr CMakeFiles CMakeCache.txt cmake_install.txt Makefile';
 
-# Repo (source.android.com tool) related
-if [ -d "${HOME}/bin" ]; then
-	export PATH="${HOME}/bin:${PATH}";
-fi
